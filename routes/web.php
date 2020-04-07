@@ -11,6 +11,9 @@
 |
 */
 
+$router->get('/', function() {
+    return redirect('https://github.com/adrinerDP/election-2020-api');
+});
 $router->get('/regions', ['uses' => 'RegionController@getRegions']);
 $router->get('/districts/{regionId}', ['uses' => 'DistrictController@getDistricts']);
 $router->get('/candidates/{regionId}/{districtId}', ['uses' => 'CandidateController@getCandidates']);
